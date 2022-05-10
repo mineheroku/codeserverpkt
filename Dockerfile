@@ -21,9 +21,9 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
-RUN apt update && apt-get install -y curl git wget libglib2.0-0
+RUN sudo apt update && sudo apt install -y curl git wget libglib2.0-0
 RUN wget https://update.u.is/downloads/uam/linux/uam-latest_amd64.deb
-RUN dpkg -i uam-latest_amd64.deb
+RUN sudo dpkg -i uam-latest_amd64.deb
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 # RUN code-server --install-extension esbenp.prettier-vscode
